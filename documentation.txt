@@ -1,0 +1,228 @@
+JAVA OOP PROJECT – REVISION SUMMARY
+
+1. PRODUCT CLASS
+
+Product is a class that acts as a blueprint for creating product objects.
+
+Product fields:
+
+* productID
+* name
+* price
+* category
+* stock
+
+A Product object represents one actual product.
+
+Example:
+Product p1 → Laptop
+Product p2 → Phone
+
+Constructor:
+
+* Used to initialize/store product information when creating an object.
+
+Getters and Setters:
+
+* Product fields are private.
+* Getters are used to access values.
+* Setters are used to modify values.
+
+displayProduct():
+
+* Used to display the product information.
+
+2. ARRAYLIST
+
+ArrayList is a resizable collection in Java.
+
+Basic syntax:
+ArrayList<String> names = new ArrayList<>();
+
+Important methods:
+
+add()       → adds an element
+get()       → gets an element using index
+set()       → replaces an element
+remove()    → removes an element
+size()      → returns number of elements
+contains()  → checks whether an element exists
+isEmpty()   → checks whether the list is empty
+clear()     → removes all elements
+
+ArrayList uses 0-based indexing.
+
+Example:
+[ Laptop, Phone, Tablet ]
+
+0 → Laptop
+1 → Phone
+2 → Tablet
+
+3. ARRAYLIST OF OBJECTS
+
+ArrayList can store objects created from our own classes.
+
+ArrayList<Product> products = new ArrayList<>();
+
+Meaning:
+
+* ArrayList → the container
+* Product → type of object stored inside it
+
+Example:
+
+Product p1 → Laptop
+Product p2 → Phone
+Product p3 → Mouse
+
+ArrayList<Product>
+[ p1, p2, p3 ]
+
+Important:
+Product class = blueprint
+Product object = one actual product
+ArrayList<Product> = collection of Product objects
+
+4. USER CLASS
+
+User is the parent/base class for users in our system.
+
+Common User fields:
+
+* userId
+* name
+* email
+
+User contains information and behavior common to different types of users.
+
+5. CUSTOMER CLASS
+
+Customer extends User.
+
+Customer inherits the common User properties and methods.
+
+Customer also has its own fields:
+
+* address
+* phoneNumber
+
+Structure:
+
+User
+└── Customer
+
+6. ADMIN CLASS
+
+Admin also extends User.
+
+Admin inherits the common User properties and methods.
+
+Admin has its own field:
+
+* role
+
+Structure:
+
+User
+└── Admin
+
+7. METHOD OVERRIDING
+
+Admin has its own version of displayUser().
+
+This is called method overriding.
+
+The purpose is to provide Admin-specific display behavior.
+
+Structure:
+
+User
+└── displayUser()
+
+Admin
+└── displayUser()  ← overridden version
+
+8. CART
+
+Cart stores products that a customer wants to buy.
+
+The Cart uses:
+
+ArrayList<Product>
+
+Concept:
+
+Cart
+↓
+ArrayList<Product>
+↓
+[ Laptop, Phone, Mouse ]
+
+When a customer adds a product:
+
+* The Product object is added to the Cart's ArrayList<Product>.
+
+The Cart can also calculate the total price.
+
+To calculate the total:
+
+* Loop through each Product in the ArrayList.
+* Get each product's price.
+* Add the prices together.
+
+9. CURRENT PROJECT STRUCTURE
+
+User
+├── Customer
+└── Admin
+
+Product
+
+Cart
+└── ArrayList<Product>
+
+Main concepts used:
+
+* Classes and objects
+* Constructors
+* Encapsulation
+* Getters and setters
+* Inheritance
+* Method overriding
+* ArrayList
+* ArrayList of objects
+* Loops
+* Object relationships
+
+CURRENT STATUS
+
+Product → completed
+User → completed
+Customer → completed
+Admin → completed
+Cart → completed and tested
+
+Today's revision → completed
+
+Next:
+Continue the OOP project with the next feature, one step at a time.
+
+SEPTEMBER 18 – OOP PROJECT
+
+* Revised ArrayList and important methods.
+* Learned ArrayList of objects: ArrayList<Product>.
+* Revised Product, User, Customer, Admin and Cart concepts.
+* Created and completed the Order class.
+* Added:
+
+  * addProduct()
+  * getTotal()
+  * updateStatus()
+  * displayOrder()
+* Tested Order successfully.
+* Tested status update: placed → shipped.
+
+NEXT:
+Continue with Place Order flow.
+
